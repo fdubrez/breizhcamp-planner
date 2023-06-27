@@ -1,0 +1,27 @@
+.column {
+    display: flex;
+}
+
+.format {
+    background: #DB4437;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+}
+
+.card-venue-tag {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+
+.talk:hover {
+    cursor: pointer;
+}
+
+.edited {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    font-size: 40px;
+}
