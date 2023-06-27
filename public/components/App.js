@@ -33,7 +33,7 @@ const talkStyle = {};
 const TalkCard = ({ talk, setCurrent, setModal, modal, commented }) => {
   return (
     <div
-      className="column talk"
+      className="column is-3 talk"
       onClick={() => {
         setCurrent(talk);
         setModal(!modal);
@@ -192,8 +192,8 @@ function App() {
             .sort((a, b) => a.order - b.order)
             .map((x) => (
               <div class="columns">
-                <div className="column">
-                  <h4 className="subtitle is-4">{x.time}</h4>
+                <div className="column is-1">
+                  <h4 className="subtitle">{x.time.slice(0, 5)}</h4>
                 </div>
                 {x.talks.map((talk) =>
                   TalkCard({
