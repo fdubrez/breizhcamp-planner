@@ -158,6 +158,27 @@ function App() {
               >
                 Sauvegarder
               </button>
+              <button
+                class="button is-info"
+                onClick={() => {
+                  const text =
+                    document.getElementsByTagName("textarea")[0].value;
+                  let actual = localStorage.getItem("breizhcamp-planner")
+                    ? JSON.parse(localStorage.getItem("breizhcamp-planner"))
+                    : {};
+                  actual[current.id] = text;
+                  localStorage.setItem(
+                    "breizhcamp-planner",
+                    JSON.stringify(actual)
+                  );
+                  let newCommented = commented
+                  newCommented[current.id]
+                  setCommented(newCommented)
+                  setModal(false)
+                }}
+              >
+                Sauvegarder & fermer
+              </button>
             </footer>
           </div>
         </div>
