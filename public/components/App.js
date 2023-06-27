@@ -183,7 +183,7 @@ function App() {
           </div>
         </div>
       )}
-      <h1 className="title is-1">Breizhcamp planner 2K22</h1>
+      <h1 className="title is-1">Breizhcamp planner 2K23</h1>
       <div className="block">
         <div class="tabs">
           <ul>
