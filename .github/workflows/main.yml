@@ -35,7 +35,9 @@ jobs:
       - run: sudo apt update && sudo apt install -y gettext
       - run: export REAL_TALKS=$(curl -s 'https://www.breizhcamp.org/json/talks.json')
       - run: export OTHER_TALKS=$(curl -s 'https://www.breizhcamp.org/json/talks_others.json')
-      - run: envsubst < public/components/App.js > replaced.js
+      - run: curl -s 'https://www.breizhcamp.org/json/talks_others.json
+      - run: REAL_TALKS=$(curl -s 'https://www.breizhcamp.org/json/talks.json') OTHER_TALKS=$(curl -s 'https://www.breizhcamp.org/json/talks_others.json') envsubst < public/components/App.js > replaced.js
+      - run: cat replaced.js
       - run: cat replaced.js > public/components/App.js
       - name: Setup Pages
         uses: actions/configure-pages@v3
